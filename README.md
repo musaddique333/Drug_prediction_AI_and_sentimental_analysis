@@ -12,7 +12,7 @@ The AI system uses a W&DNN (Wide and Deep Neural Network) model to predict the b
 
 The predictions from the W&DNN model are verified by analyzing the effectiveness of the recommended drug on patients with similar conditions.
 
-![Verification of Results](output3.jpg "Verification of Results")
+![Verification of Results](output3.jpg "Verification of Results" =150x)
 
 The system has potential applications in the healthcare industry, where it can be used to personalize drug prescriptions based on individual patient conditions and sentiments.
 
