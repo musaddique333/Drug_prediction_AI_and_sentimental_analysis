@@ -22,10 +22,3 @@ This project was conducted by Surya Kallumadi from Kansas State University and F
 
 ## Citation
 Felix Gräßer, Surya Kallumadi, Hagen Malberg, and Sebastian Zaunseder. 2018. Aspect-Based Sentiment Analysis of Drug Reviews Applying Cross-Domain and Cross-Data Learning. In Proceedings of the 2018 International Conference on Digital Health (DH '18). ACM, New York, NY, USA, 121-125. DOI:https://dl.acm.org/doi/10.1145/3194658.3194677
-
-Add some fancy icons:
-- 👨‍🔬
-- 🧪
-- 💊
-- 🔍
-- 📊
