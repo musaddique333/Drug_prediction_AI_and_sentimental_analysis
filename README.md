@@ -1,24 +1,99 @@
-## Drug Prediction AI and Sentiment Analysis
+# Multi-Domain Sentiment Analysis and Drug Prediction
 
-This project involves building an AI system that performs sentimental analysis on drug reviews written by customers and predicts the appropriate drug to use based on the patient's conditions.
+A brief description of your project.
 
-The sentimental analysis is done using LSTM (Long Short-Term Memory) to analyze the text data of drug reviews and extract the sentiment behind them. This process helps to identify the overall attitude of customers towards a particular drug and the common side effects experienced.
+## Table of Contents
 
-![LSTM Model](output1.jpg "LSTM Model")
+- [Project Title](#project-title)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Data](#data)
+- [Preprocessing](#preprocessing)
+- [Training](#training)
+- [Evaluation](#evaluation)
+- [Results](#results)
+- [Model Deployment](#model-deployment)
+- [Additional Resources](#additional-resources)
+- [Contributing](#contributing)
+- [License](#license)
 
-The AI system uses a W&DNN (Wide and Deep Neural Network) model to predict the best drug for a patient based on their conditions. The model is built on a cross-domain and cross-data learning approach, which allows it to learn from multiple datasets and adapt to different patient profiles.
+## Introduction
 
-![W&DNN Model Prediction](output2.jpg "W&DNN Model Prediction")
+This project is focused on performing Multi-Domain Sentiment Analysis using deep learning techniques. Sentiment analysis, also known as opinion mining, is the process of determining the emotional tone behind a piece of text. In this project, we analyze text data to determine whether the sentiment expressed in each piece of text is positive or negative.
 
-The predictions from the W&DNN model are verified by analyzing the effectiveness of the recommended drug on patients with similar conditions.
+# Getting Started
 
-<p align="center">
-  <img width="400" height="600" src="output3.jpg">
-</p>
+## Prerequisites
 
-The system has potential applications in the healthcare industry, where it can be used to personalize drug prescriptions based on individual patient conditions and sentiments.
+Before running the code in this project, make sure you have the following libraries and dependencies installed:
 
-This project was conducted by Surya Kallumadi from Kansas State University and Felix Gräßer from the Technical University of Dresden, and was published in the Proceedings of the 2018 International Conference on Digital Health.
+- Python 3.x
+- TensorFlow
+- Pandas
+- Numpy
 
-## Citation
-Felix Gräßer, Surya Kallumadi, Hagen Malberg, and Sebastian Zaunseder. 2018. Aspect-Based Sentiment Analysis of Drug Reviews Applying Cross-Domain and Cross-Data Learning. In Proceedings of the 2018 International Conference on Digital Health (DH '18). ACM, New York, NY, USA, 121-125. DOI:https://dl.acm.org/doi/10.1145/3194658.3194677
+You can install them using pip:
+
+```bash
+  pip install tensorflow pandas numpy
+```
+# Dataset
+
+The project uses a dataset for training and testing the sentiment analysis model. The dataset is stored in two separate files, one for training data and the other for testing data. The training data and testing data are loaded as Pandas DataFrames from CSV files.
+
+## Data Preprocessing
+
+The following data preprocessing steps are performed:
+
+1. Columns that are not required for sentiment analysis are dropped.
+2. The ratings in the dataset are converted to binary labels (1 for positive, 0 for negative).
+3. The reviews are tokenized and padded to ensure consistent lengths for input data.
+
+# Model
+
+The deep learning model used for sentiment analysis is based on Long Short-Term Memory (LSTM) networks. The model architecture consists of:
+
+- An Embedding layer
+- A Dense hidden layer
+- Dropout layers to prevent overfitting
+- An LSTM layer
+- Another Dropout layer
+- A Dense output layer
+
+The model is compiled using binary cross-entropy loss and the Adam optimizer.
+
+## Training
+
+The model is trained on the preprocessed data for a certain number of epochs. The training process provides insights into the loss and accuracy of the model.
+
+## Model Export
+
+The trained model is saved to a file using the pickle library. This saved model can be loaded and used for making sentiment predictions for new reviews.
+
+# Usage
+
+You can use the model to perform sentiment analysis on new reviews by calling the `predict_new_review` function. Provide the review text as input, and it will output whether the sentiment is positive or negative.
+
+```python
+predict_new_review(['Your new review text here'])
+```
+# Drug Prediction
+
+The project includes a drug prediction model. Given a condition, review, rating, and useful count, it predicts the most suitable drug for the user. The prediction is based on a Wide & Deep Neural Network (W&DNN) model.
+
+## Exporting Data
+
+The data used for sentiment analysis can be exported to a CSV file for further analysis.
+
+## Authors
+
+- musaddique333
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
